@@ -12,6 +12,6 @@ After that, you can choose a delay time distribution in minutes. The distributio
 > ```
 > exact_delay_time = random.randint(delay_time - delay_distribution, delay_time + delay_distribution)
 > ```  
-After setting the delay and distribution, the player will play a voice line from the selected pack periodically.  
+After setting the delay and distribution, the player will play a random voice line from the selected pack periodically.  
 
 Enjoy!
