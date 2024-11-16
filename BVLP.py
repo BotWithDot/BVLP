@@ -30,8 +30,13 @@ while True:
 
 print(f"{len(voice_lines)} voice lines detected")
 
-delay_time = int(input("Set average time between voice lines (minutes): ")) * 60
-delay_distribution = int(input("Set standard deviation in time between voice lines (minutes): ")) * 60
+if input("Set time in [m]inutes or [s]econds? ") == "m":
+    delay_time = int(input("Set average time between voice lines (minutes): ")) * 60
+    delay_distribution = int(input("Set standard deviation in time between voice lines (minutes): ")) * 60
+else:
+    delay_time = int(input("Set average time between voice lines (seconds): "))
+    delay_distribution = int(input("Set standard deviation in time between voice lines (seconds): "))
+    
 
 if delay_distribution > delay_time:
     raise ValueError("Standard deviation must be more than time between voice lines.")
